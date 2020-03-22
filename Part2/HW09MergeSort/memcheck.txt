@@ -1,0 +1,65 @@
+==28146== Memcheck, a memory error detector
+==28146== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==28146== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==28146== Command: ./hw09 inputs/input1
+==28146== Parent PID: 28145
+==28146== 
+--28146-- 
+--28146-- Valgrind options:
+--28146--    --tool=memcheck
+--28146--    --log-file=memcheck.txt
+--28146--    --leak-check=full
+--28146--    --verbose
+--28146-- Contents of /proc/version:
+--28146--   Linux version 2.6.32-754.22.1.el6.x86_64 (mockbuild@x86-02.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-23) (GCC) ) #1 SMP Tue Sep 17 16:24:44 UTC 2019
+--28146-- Arch and hwcaps: AMD64, amd64-sse3-cx16-lzcnt-avx2-bmi
+--28146-- Page sizes: currently 4096, max supported 4096
+--28146-- Valgrind library directory: /usr/lib64/valgrind
+--28146-- Reading syms from /home/shay/a/jhelfman/ECE264/problems/2019FallProblems/Part2/HW09MergeSort/hw09
+--28146-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--28146--    object doesn't have a dynamic symbol table
+--28146-- Reading syms from /lib64/ld-2.12.so
+--28146--   Considering /usr/lib/debug/.build-id/97/af4b77212f74cff72b6c013e6aa2d74a97ef60.debug ..
+--28146--   .. build-id is valid
+--28146-- Scheduler: using generic scheduler lock implementation.
+--28146-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==28146== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-28146-by-jhelfman-on-ecegrid-thin7.ecn.purdue.edu
+==28146== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-28146-by-jhelfman-on-ecegrid-thin7.ecn.purdue.edu
+==28146== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-28146-by-jhelfman-on-ecegrid-thin7.ecn.purdue.edu
+==28146== 
+==28146== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==28146== don't want to do, unless you know exactly what you're doing,
+==28146== or are doing some strange experiment):
+==28146==   /usr/lib64/valgrind/../../bin/vgdb --pid=28146 ...command...
+==28146== 
+==28146== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==28146==   /path/to/gdb ./hw09
+==28146== and then give GDB the following command
+==28146==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=28146
+==28146== --pid is optional if only one valgrind process is running
+==28146== 
+--28146-- REDIR: 0x342d617f90 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--28146-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--28146-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--28146-- REDIR: 0x342d617da0 (index) redirected to 0x4a07c30 (index)
+--28146-- REDIR: 0x342d617e20 (strcmp) redirected to 0x4a08570 (strcmp)
+--28146-- Reading syms from /lib64/libc-2.12.so
+--28146--   Considering /usr/lib/debug/.build-id/a5/f93642576869a169bacf9771c674e0cb91fcbb.debug ..
+--28146--   .. build-id is valid
+--28146-- REDIR: 0x342da84d80 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--28146-- REDIR: 0x342da87040 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--28146-- REDIR: 0x342da82cf0 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--28146-- REDIR: 0x342da7b920 (free) redirected to 0x4a063a9 (free)
+==28146== 
+==28146== HEAP SUMMARY:
+==28146==     in use at exit: 0 bytes in 0 blocks
+==28146==   total heap usage: 0 allocs, 0 frees, 0 bytes allocated
+==28146== 
+==28146== All heap blocks were freed -- no leaks are possible
+==28146== 
+==28146== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+--28146-- 
+--28146-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--28146-- used_suppression:      4 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==28146== 
+==28146== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)

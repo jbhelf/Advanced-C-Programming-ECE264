@@ -1,0 +1,67 @@
+==24173== Memcheck, a memory error detector
+==24173== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+==24173== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+==24173== Command: ./hw15 inputs/test2in inputs/test2post output2
+==24173== Parent PID: 24171
+==24173== 
+--24173-- 
+--24173-- Valgrind options:
+--24173--    --tool=memcheck
+--24173--    --log-file=memcheck.txt
+--24173--    --leak-check=full
+--24173--    --verbose
+--24173-- Contents of /proc/version:
+--24173--   Linux version 2.6.32-754.23.1.el6.x86_64 (mockbuild@x86-01.bsys.centos.org) (gcc version 4.4.7 20120313 (Red Hat 4.4.7-23) (GCC) ) #1 SMP Thu Sep 26 12:05:41 UTC 2019
+--24173-- Arch and hwcaps: AMD64, amd64-sse3-cx16-lzcnt-avx2-bmi
+--24173-- Page sizes: currently 4096, max supported 4096
+--24173-- Valgrind library directory: /usr/lib64/valgrind
+--24173-- Reading syms from /home/shay/a/jhelfman/ECE264/problems/2019FallProblems/Part3/HW15BinaryTree1/hw15
+--24173-- Reading syms from /usr/lib64/valgrind/memcheck-amd64-linux
+--24173--    object doesn't have a dynamic symbol table
+--24173-- Reading syms from /lib64/ld-2.12.so
+--24173--   Considering /usr/lib/debug/.build-id/97/af4b77212f74cff72b6c013e6aa2d74a97ef60.debug ..
+--24173--   .. build-id is valid
+--24173-- Scheduler: using generic scheduler lock implementation.
+--24173-- Reading suppressions file: /usr/lib64/valgrind/default.supp
+==24173== embedded gdbserver: reading from /tmp/vgdb-pipe-from-vgdb-to-24173-by-jhelfman-on-ecegrid-thin6.ecn.purdue.edu
+==24173== embedded gdbserver: writing to   /tmp/vgdb-pipe-to-vgdb-from-24173-by-jhelfman-on-ecegrid-thin6.ecn.purdue.edu
+==24173== embedded gdbserver: shared mem   /tmp/vgdb-pipe-shared-mem-vgdb-24173-by-jhelfman-on-ecegrid-thin6.ecn.purdue.edu
+==24173== 
+==24173== TO CONTROL THIS PROCESS USING vgdb (which you probably
+==24173== don't want to do, unless you know exactly what you're doing,
+==24173== or are doing some strange experiment):
+==24173==   /usr/lib64/valgrind/../../bin/vgdb --pid=24173 ...command...
+==24173== 
+==24173== TO DEBUG THIS PROCESS USING GDB: start GDB like this
+==24173==   /path/to/gdb ./hw15
+==24173== and then give GDB the following command
+==24173==   target remote | /usr/lib64/valgrind/../../bin/vgdb --pid=24173
+==24173== --pid is optional if only one valgrind process is running
+==24173== 
+--24173-- REDIR: 0x31f8817f90 (strlen) redirected to 0x38049551 (vgPlain_amd64_linux_REDIR_FOR_strlen)
+--24173-- Reading syms from /usr/lib64/valgrind/vgpreload_core-amd64-linux.so
+--24173-- Reading syms from /usr/lib64/valgrind/vgpreload_memcheck-amd64-linux.so
+--24173-- REDIR: 0x31f8817da0 (index) redirected to 0x4a07c30 (index)
+--24173-- REDIR: 0x31f8817e20 (strcmp) redirected to 0x4a08570 (strcmp)
+--24173-- Reading syms from /lib64/libc-2.12.so
+--24173--   Considering /usr/lib/debug/.build-id/a5/f93642576869a169bacf9771c674e0cb91fcbb.debug ..
+--24173--   .. build-id is valid
+--24173-- REDIR: 0x31f8c84d80 (strcasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--24173-- REDIR: 0x31f8c87040 (strncasecmp) redirected to 0x480155c (_vgnU_ifunc_wrapper)
+--24173-- REDIR: 0x31f8c82cf0 (__GI_strrchr) redirected to 0x4a07ab0 (__GI_strrchr)
+--24173-- REDIR: 0x31f8c7aac0 (malloc) redirected to 0x4a069ac (malloc)
+--24173-- REDIR: 0x31f8c7b920 (free) redirected to 0x4a063a9 (free)
+--24173-- REDIR: 0x31f8c8aba0 (strchrnul) redirected to 0x4a09fb0 (strchrnul)
+==24173== 
+==24173== HEAP SUMMARY:
+==24173==     in use at exit: 0 bytes in 0 blocks
+==24173==   total heap usage: 10 allocs, 10 frees, 1,840 bytes allocated
+==24173== 
+==24173== All heap blocks were freed -- no leaks are possible
+==24173== 
+==24173== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
+--24173-- 
+--24173-- used_suppression:      4 U1004-ARM-_dl_relocate_object
+--24173-- used_suppression:      4 glibc-2.5.x-on-SUSE-10.2-(PPC)-2a
+==24173== 
+==24173== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 8 from 6)
